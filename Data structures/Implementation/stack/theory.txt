@@ -1,0 +1,37 @@
+1. Stack: 
+    - Stack is a linear data structure which follows LIFO or FILO.
+
+2. Stack in Python:
+    - Stack in Python can be implemented using the following ways: 
+        - list and Collections.deque
+            - append()
+            - pop()   
+        
+        - queue.LifoQueue
+            - maxsize           Number of items allowed in the queue.
+            - empty()           Return True if the queue is empty, False otherwise.
+            - full()            Return True if there are maxsize items in the queue.
+            - get()             Remove and return an item from the queue. If the queue is empty, wait until an item is available.
+            - get_nowait()      Return an item if one is immediately available, else raise QueueEmpty.
+            - put(item)         Put an item into the queue. If the queue is full, wait until a free slot is available before adding the item.
+            - put_nowait(item)  Put an item into the queue without blocking.
+            - qsize()           Return the number of items in the queue.
+
+
+3. Operations on stack:
+
+    - empty()       Returns whether the stack is empty                              O(1)
+    - size()        Returns the size of the stack                                   O(1)
+    - top()         Returns a reference to the topmost element of the stack         O(1)
+    - push(a)       Inserts the element ‘a’ at the top of the stack                 O(1)
+    - pop()         Deletes the topmost element of the stack                        O(1)
+
+4. Types of problems:
+
+    - Design and Implementation
+    - Standard Problems
+    - Operations on Stack
+    - Misc
+
+
+

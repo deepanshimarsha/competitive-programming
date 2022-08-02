@@ -1,0 +1,44 @@
+1. A graph is a collection of nodes and edges that represents relationships:
+	- Nodes are vertices that correspond to objects.
+	- Edges are the connections between objects.
+	- The graph edges sometimes have Weights, which indicate the strength of each connection between the nodes.
+
+2. Two Types of Graphs:
+	- Undirected graphs have edges that do not have a direction. The edges indicate a two-way relationship.
+	- Directed graphs have edges with direction. The edges indicate a one-way relationship.
+
+3. Representation of Graphs in Computer:
+	3.1 Adjacency Lists - sparse graph
+		- it consists of n linked list where n is no of vertices, each having adjacent nodes to that node.
+		- space complexity - theta(n + 2E)
+		- if the graph is directed then the sum of the lengths of all linked list will be |E|
+		- if the graph is undirected then the sum of the lengths of all linked list will be 2|E|
+		- Disadvantage - does not permit faster edge lookup
+		
+	3.2 Adjacency matrix - dense graph
+		- it is a matrix A[n][n] where n is no of vertices and a[i][j]=1 if i and j are adjacent, else a[i][j]=0.
+		- space complexity - theta(n^2)
+		- Advantage - does permit faster edge lookup
+		- Adjacency matrix A of an undirected graph is its own transpose: A = A^T
+	
+	3.3 Sparse graph - In which |E| is much lesser than |V|^2
+
+	3.4 Dense Graph - In which |E| is close to |V|^2
+
+4. Time to compute the out degree and in degree of every vertices:
+    - out degree: how many neighbours of a vertex
+    - in degree: the number of times it is the neighbour of other vertices
+    4.1. Adjacency Lists:
+         (out-degree)                 (in-degree)
+         -time: O(V + E)              -time: O(VE), O(V + E)
+         -space: O(1)                 -space: O(1), O(V)
+
+    4.2. Adjacency Matrix:
+         (out-degree)                 (in-degree)
+         -time: O(V)                  -time: O(V^2)
+         -space: O(1)                 -space: O(1)
+
+5. Universal Sink: A vertex with in-degree |V| - 1 and out-degree 0
+
+
+

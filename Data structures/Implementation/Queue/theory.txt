@@ -1,0 +1,112 @@
+1. Queue: 
+    - Queue is a linear structure which follows First In First Out (FIFO).
+
+2. Operations on Queue: 
+    - Enqueue
+    - Dequeue
+    - Front
+    - Rear
+
+3. Applications of Queue:
+    - used in Breadth First Search (tree, graph)
+    - CPU scheduling, Disk Scheduling
+    - When data is transferred asynchronously between two processes.
+
+4. Queue in python:
+    - Queue in Python can be implemented by the following ways:
+        1. list: slow
+            - append() or pop(0) -- o(n)
+
+        2. collections.deque: fast
+            - append() and popleft() -- o(1)
+
+        3. queue.Queue: 
+            - maxsize
+            - empty()
+            - full() 
+            - get()
+            - get_nowait()
+            - put(item)
+            - put_nowait(item)
+            - qsize()
+
+5. Types of queue:
+
+    1. Dequeue - allows insert and delete at both ends.
+        - Operations on Deque:
+            - insertFront()     Adds an item at the front of Deque.
+            - insertLast()      Adds an item at the rear of Deque.
+            - deleteFront()     Deletes an item from front of Deque.
+            - deleteLast()      Deletes an item from rear of Deque.
+
+            - getFront()        Gets the front item from queue.
+            - getRear()         Gets the last item from queue.
+            - isEmpty()         Checks whether Deque is empty or not.
+            - isFull()          Checks whether Deque is full or not.
+
+        - Applications:
+            - Deque supports both stack and queue operations, it can be used as both.
+            - Deque data structure supports clockwise and anticlockwise rotations in O(1) time
+
+        - Implementation:
+            - Deque can be implemented either using a doubly linked list or circular array.
+            - Deque in Python:
+                - implemented using the module “collections“ (collections.deque)
+                    - Operations: 
+                        - append()          o(1)
+                        - appendleft()      o(1)
+                        - pop()             o(1)
+                        - popleft()         o(1)
+
+    2. Priority Queue:
+        - Every item has a priority associated with it.
+        - An element with high priority is dequeued before an element with low priority.
+        - If two elements have the same priority, they are served according to their order in the queue.
+
+        - Operations:
+            - insert(item, priority)        Inserts an item with given priority.
+            - getHighestPriority()          Returns the highest priority item.
+            - deleteHighestPriority()       Removes the highest priority item.
+
+        - Implementation:
+            - we can use ARRAY having node objects having value and priority as its properties: Worst
+                - insert(item, priority)      o(1)      adding an item at end of array                              
+                - getHighestPriority()        o(n)      linearly searching the highest priority item in array       
+                - deleteHighestPriority()     o(n)      first linearly searching an item, then removing the         
+                                                        item by moving all subsequent items one position back.
+
+            - we can use linked list: Better
+                - time complexity of all operations with linked list remains same as array.
+                - deleteHighestPriority() can be more efficient as we don’t have to move items.
+            
+            - Heaps: Best
+                - insert(item, priority)       o(logn)
+                - getHighestPriority()         o(1)
+                - deleteHighestPriority()      o(logn) 
+
+        - Applications of Priority Queue:
+            - CPU Scheduling
+            - Graph algorithms like Dijkstra’s shortest path algorithm, Prim’s Minimum Spanning Tree, etc
+            - All queue applications where priority is involved.
+
+    3. Circular Queue:
+        - the last position is connected back to the first position to make a circle.
+        - In a normal Queue, once queue becomes full, we can not insert the next element 
+            even if there is a space in front of queue.
+        
+        - Operations:
+            - Front:            Get the front item from queue.                              o(1)
+            - Rear:             Get the last item from queue.                               o(1)
+            - enQueue(value)    check whether queue is full or not then insert              o(1)
+            - deQueue()         check whether queue is empty and then remove from front     o(1)
+
+        - Applications:
+            - Memory Management
+            - Traffic system
+            - CPU Scheduling
+
+6. Types of Problems:
+    - Design and Implementation
+    - Standard Problems
+    - Operations on Queue
+    - Misc

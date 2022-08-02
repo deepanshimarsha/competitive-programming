@@ -1,0 +1,58 @@
+1. Array:
+    - An array is a collection of items stored at contiguous memory locations.
+    - Stores multiple items of the same data type.
+    - Easier to calculate the position of each element by simply adding an offset to a base value.
+
+2. Arrays in Python:
+    - Array in Python can be implemented using the following ways:
+        - list
+        - array
+
+    - array(data type,value list) : function which is in array module is used create an array with specific data type and and value list.
+
+        Type Code	C Type	                Python Type         Minimum size in Bytes
+
+        ‘b’	        signed char	            int	                1
+        ‘B’	        unsigned char	        int	                1
+        ‘u’	        Py_UNICODE              unicode character	2
+        ‘h’	        signed short	        int	                2
+        ‘H’	        unsigned short	        int	                2
+        ‘i’	        signed int	            int	                2
+        ‘I’	        unsigned int	        int	                2
+        ‘l’	        signed long	            int	                4
+        ‘L’	        unsigned long	        int                 4
+        ‘q’	        signed long long	    int	                8
+        ‘Q’	        unsigned long long	    int	                8
+        ‘f’	        float	                float	            4
+        ‘d’	        double	                float	            8
+
+    - example: 
+        #initializes array with signed integers
+        import array
+        arr = array.array("i",[1,2,3])
+
+3. Operations on array:
+    - append()      add the value/list of values (as argument) at the end of the array.
+    - insert(i,x)   add the value(x) at the ith position specified in its argument.
+    - pop(i)        removes the element at ith position mentioned in its argument and returns it.
+    - remove(x)     remove the first occurrence of the value(x) mentioned in its arguments.
+    - index(x)      returns the index of the first occurrence of value(x) mentioned in arguments.
+    - reverse()     reverses the array.
+
+    -example:
+        import array
+        arr = array.array("i",[1,2,3])
+        arr.append(4)
+
+        #appended array : 1 2 3 4
+
+4. Types of problems:
+    -Array Rotations
+    -Arrangement Rearrangement
+    -Order Statistics
+    -Range Queries
+    -Searching and Sorting
+    -Optimization Problems
+    -Matrix
+    -Misc
+
